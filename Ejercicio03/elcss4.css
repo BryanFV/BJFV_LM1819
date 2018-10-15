@@ -1,0 +1,38 @@
+table {
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+
+  td {
+    border: 2px solid black;
+  }
+
+  th {
+    border: 2px solid black;
+  }
+
+  #captionsuperior {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #captioninferior {
+    caption-side: bottom;
+    font-size: 19px;
+    color: brown;   
+  }
+
+  .rosa {
+      background-color: rgba(223, 221, 132, 0.986);
+      color: rgb(184, 50, 50);   
+      text-align: center;
+      width: 90px;
+  }
+
+  .mar {
+      background-color: rgba(136, 214, 245, 0.986); 
+      color: blue;
+      text-align: center;
+  }

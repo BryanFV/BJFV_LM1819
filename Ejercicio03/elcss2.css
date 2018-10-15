@@ -1,0 +1,36 @@
+table {
+    border: 15px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;  
+    height: 25%;
+    width: 65%;
+    margin: 0 auto;
+  
+    
+}
+
+th, table {
+    border: 2px solid black;
+    background: white;
+}
+td, table {
+    border: 2px solid black;
+    background: white;
+}
+
+.green {
+    background-color:#9fda9a;
+}
+
+#descanso{
+    background-color:#f3d9d9;
+    text-align: center;
+    letter-spacing: 60px;
+}
+div{
+    border:3px solid black;
+    background: rgb(224, 85, 85);
+    padding: 30px 30px 30px 30px;
+}
+

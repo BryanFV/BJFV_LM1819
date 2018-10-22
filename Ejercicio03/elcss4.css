@@ -2,37 +2,39 @@ table {
     empty-cells: hide;
     border-collapse: separate;
     border-spacing: 5px;
+    margin: 0 auto;
   }
 
   td {
-    border: 2px solid black;
+    border: 1px solid black;
   }
 
   th {
-    border: 2px solid black;
+    border: 1px solid black;
   }
 
-  #captionsuperior {
+  #arriba{
     caption-side: top;
     font-weight: bold;
     font-size: 20px;
   }
 
-  #captioninferior {
+  #abajo{
     caption-side: bottom;
     font-size: 19px;
-    color: brown;   
+    color: #97001b;   
+    font-weight: bold;
   }
 
   .rosa {
-      background-color: rgba(223, 221, 132, 0.986);
-      color: rgb(184, 50, 50);   
+      background-color:#ffffcc;
+      color: #97001b;   
       text-align: center;
       width: 90px;
   }
 
   .mar {
-      background-color: rgba(136, 214, 245, 0.986); 
+      background-color: #ccffff; 
       color: blue;
       text-align: center;
   }

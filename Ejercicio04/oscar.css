@@ -2,7 +2,7 @@
 color:#005a66;
 margin:0 auto;
 background: #33e7ff;
-width:860px;
+width:930px;
 height: 440px;
 }
 .dos{
@@ -20,7 +20,9 @@ height: 440px;
    
 
 }
-
+h1{
+    text-align: center;
+}
 #oscar{
     letter-spacing: 25px;
     text-transform: uppercase;

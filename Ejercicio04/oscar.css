@@ -2,8 +2,8 @@
 color:#005a66;
 margin:0 auto;
 background: #33e7ff;
-width:930px;
-height: 440px;
+width:650px;
+height: 450px;
 }
 .dos{
     color:black;
@@ -12,21 +12,35 @@ height: 440px;
     border:#005a66 dotted;
     float: left;
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: #00b4cc;
-    font-size: 12px;
+    font-size: 10px;
     margin: 10px;
    
 
+}
+.tres{
+    color:black;
+    font-family:arial;
+    font-style: italic;
+    border:#005a66 dotted;
+    clear:both;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #00b4cc;
+    font-size: 10px;
+    margin: 10px;
 }
 h1{
     text-align: center;
 }
 #oscar{
-    letter-spacing: 25px;
+    letter-spacing: 19px;
     text-transform: uppercase;
     text-align: center;
+    font-family: Arial;
 }
 .inicio{
     text-transform: uppercase;

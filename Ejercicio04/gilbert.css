@@ -1,0 +1,40 @@
+body{
+    background:#997366;
+    font-family: arial;
+}
+h1{
+    text-align: center;
+}
+h3{
+    background: white;
+}
+#encabezado{
+    background: #9d847b;
+    width: 1400px;
+    text-align: justify;
+    margin: 0 auto;
+}
+#sistemas{
+    border: 1px solid white;
+    width: 1400px;
+    text-align: justify;
+    margin: 0 auto;
+    background:  #997366;
+    padding: 5px;
+
+}
+.sis{
+    background:#b39f98;
+}
+.cap{
+    border: 2px solid #463029;
+    text-align: center;
+    width: 1000px;
+    margin:0 auto;
+    clear:both;
+    background: #b39f98;
+    color: white;   
+}
+.parrafos{
+
+}

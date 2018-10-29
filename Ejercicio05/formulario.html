@@ -9,9 +9,12 @@
 </head>
 <body>
     <form action="gestionardatos.jsp" method="GET">
+        <fieldset>
         <label for="nombre">Nombre de Usuario</label>
         <input type="text" value="" name="nombre" id="nombre" placeholder="Nombre de usuario"
         size="100" maxlength="20" />
+        <br />
+        <input type="password" name="password" />
         <br />
         <label for="pregunta">¿Alumno?</label>
         <input type="radio" name="pregunta" id="pregunta" value="S" name="S" checked="checked" />Sí
@@ -29,19 +32,34 @@
             <optgroup label="Dos">
                 <option valie="JA">Jaén</option>
                 <option valie="HU">Huelva</option>
-        </optgroup>
+        </optgroup>      
         </select>
+        <input type="file" name="archivo" />
+        <textarea></textarea>
         <br />
         <input type="button" value="Pulsar" name="boton" />
         <br />
-        <input type="password" name="password" />
+        
         <br />
         <input type="submit" value="Enviar" />
         <br />
         <input type="reset" value="Borrar" />
 
 
-
+    </fieldset>
+    </form>
+    <form>
+        <input type="number" min="1" max="10" required="required" />
+        <input type="email" /> 
+        <input type="url" />
+        <input type="submit" />
+        <input type="date" />
+        <input type="time" />
+        <input type="datetime-local" />
+        <input type="month" />
+        <input type="search" />
+        <input type="tel"/>
+        <input type="" />
     </form>
     
 </body>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+    <form action="gestionardatos.jsp" method="GET">
+        <label for="nombre">Nombre de Usuario</label>
+        <input type="text" value="" name="nombre" id="nombre" placeholder="Nombre de usuario"
+        size="100" maxlength="20" />
+        <br />
+        <label for="pregunta">¿Alumno?</label>
+        <input type="radio" name="pregunta" id="pregunta" value="S" name="S" checked="checked" />Sí
+        <input type="radio" name="pregunta" id="pregunta" value="N"  name="N" />No
+        <br />
+        <label>Aficiones</label>
+        <input type="checkbox" name="futbol" value="f" />Fútbol
+        <input type="checkbox" name="futbol" value="c" />Cine
+        <br />
+        <label for="provincias">Provincias</label>
+        <select name="provincias" id="provincias">
+            <optgroup label="Uno">
+                <option valie="SE">Sevilla</option>
+            </optgroup>
+            <optgroup label="Dos">
+                <option valie="JA">Jaén</option>
+                <option valie="HU">Huelva</option>
+        </optgroup>
+        </select>
+        <br />
+        <input type="button" value="Pulsar" name="boton" />
+        <br />
+        <input type="password" name="password" />
+        <br />
+        <input type="submit" value="Enviar" />
+        <br />
+        <input type="reset" value="Borrar" />
+
+
+
+    </form>
+    
+</body>
+</html>

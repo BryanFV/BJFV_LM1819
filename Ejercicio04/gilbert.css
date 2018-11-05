@@ -10,13 +10,13 @@ h3{
 }
 #encabezado{
     background: #9d847b;
-    width: 1400px;
+    width: 1300px;
     text-align: justify;
     margin: 0 auto;
 }
 #sistemas{
     border: 1px solid white;
-    width: 1400px;
+    width: 1300px;
     text-align: justify;
     margin: 0 auto;
     background:  #997366;
@@ -37,6 +37,9 @@ h3{
     
 }
 .parrafos{
-padding: 5px;
-margin: 0 auto;
+padding-bottom: 15px;
+
+}
+#todo{
+    margin:0 auto;
 }

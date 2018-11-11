@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Gabriela);
+
 body {
-    background:#c7c8d1;
+    background: #c7c8d1;
     font-family: sans-serif;
     text-align: justify;
 }
+
 h1 {
     margin: 0;
     color: #575a75;
@@ -11,11 +13,12 @@ h1 {
     font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
-    
-  }
-.h2uno{
+
+}
+
+.h2uno {
     margin: 0;
-    padding-left: 5px; 
+    padding-left: 5px;
     padding-bottom: 10px;
     color: white;
     font-family: "Gabriela";
@@ -25,38 +28,48 @@ h1 {
 }
 
 
-.hdos{
+.hdos {
     border-top-left-radius: 16px;
-   background-color: #e600e6;
-   margin: 0;
-   padding-left: 5px; 
-   color: white;
-   font-family: "Gabriela";
-   font-size: 2rem;
+    background-color: #e600e6;
+    margin: 0;
+    padding-left: 5px;
+    color: white;
+    font-family: "Gabriela";
+    font-size: 2rem;
 
 }
 
-.desc1{
+.desc1 {
     text-align: justify;
     padding-left: 20px;
     padding-top: 5px;
 }
-.LA{
+.desc2 {
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.LA {
     border: #cc4400 3px solid;
     border-radius: 0 20px 20px 20px;
     margin: 10px 50px;
     background: #ffa666;
 }
-.GA{
-    border: #e600e6 3px solid;
-  border-radius: 20px 0;
-  margin: 10px 50px;
-  
-}
-.lugar1{
-    background: #db5b00;
-    padding-left: 5px;
-}
-.lugar2{
 
+.GA {
+    border: #e600e6 3px solid;
+    border-radius: 20px 0;
+    margin: 10px 50px;
+    background: #ffccff;
+
+}
+
+.lugar1 {
+    background: #db5b00;
+    padding-left: 10px;
+}
+
+.lugar2 {
+    background: #ff80ff;
+    padding-left: 10px;
 }

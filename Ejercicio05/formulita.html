@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,7 @@
                 </tr>
                 <tr>
                     <th><label for="Contraseña">Contraseña</label></th>
-                    <td><input type='password' name='password' required></td>
+                    <td><input type='password' name='password' required pattern=[0-9]{*}[A-Z]></td>
                 </tr>
                 <tr>
                         <th><label for="pregunta">¡Hola, soy el profesor Oak, pero antes que nada dime si eres...!</label></th>
@@ -112,7 +112,7 @@
                 </tr>
                 <tr>
                     <th><label for="foto">¡Sube una foto!</label></th>
-                    <td><input type="file" name="archivo" /></td>
+                    <td><input type="file" name="archivo" accept="file_extensiom|images/*|video/*" /></td>
                 </tr>
                 <tr>
                     <th>Describete un poco</th>

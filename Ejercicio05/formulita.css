@@ -1,8 +1,9 @@
 body{
     background: rgb(221, 137, 88);
+    color:rgb(27, 7, 7);
 }
 label{
-    color:black;
+    color:rgb(49, 12, 12);
 }
 #table1{
     background: rgb(145, 79, 199);
@@ -15,11 +16,17 @@ label{
 }
 #form2{
     float: right;
-    background-image: url(pokemon.jpg);
+    background-image: url("pokemon.jpg");
     margin:0;
     border: dotted rgb(236, 6, 6) 3px;
    label:
 }
 #form1{
     float: left;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: right;
 }

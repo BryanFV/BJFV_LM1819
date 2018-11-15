@@ -1,22 +1,143 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Le Formule</title>
+    <link rel='stylesheet' type="text/css" href="formulita.css">
+    <title>Formulario de prueba de HTML5</title>
 </head>
 <body>
-    <div id="Cuerpo">
-            <form action="actividadfor" method="GET">
-
+    <div id="form1">
+        <h1>Formulita 1</h1>
+        
+    <table id='table1'>
+        <form action="la formulita" method="GET" target="">
+        <tr>
+            <th><label for="nombre" >Nombre:</label></th>
+            <td><input type='text' name='name' autofocus required></td>
+        </tr>
+        <tr>
+            <th><label for="email">Correo electróncico</label></th>
+            <td><input type='text' name='email' required></td>
+        </tr>
+        <tr>
+            <th><label for="url">URL:</label></th>
+            <td><input type="url"  name="url" placeholder="Escribe la URL de tu página web personal"></td>
+        </tr>
+        <tr>
+            <th><label for="fecha">Fecha</label></th>
+            <td><input type="date"  name="date"></td>
+        </tr>
+        <tr>
+            <th><label for="tiempo">Tiempo:</label></th>
+            <td><input type='time'  name='time'></td>
+        </tr>
+        <tr>
+            <th><label for="fechahora">Fecha y hora:</label></th>
+            <td><input type='datetime' name='fyh'></td>
+        </tr>
+        <tr>
+            <th><label for="mes">Mes:</label></th>
+            <td><input type='month' name='month'></td>
+        </tr>
+        <tr>
+            <th><label for="semana">Semana:</label></th>
+            <td><input type='week' name='semana'></td>
+        </tr>
+        <tr>
+            <th><label for="numero">Número (min -10, max 10):</label></th>
+            <td><input type='number'  name='numero' min="-10" max="10"></td>
+        </tr>
+        <tr>
+            <th><label for="telefono">Teléfono:</label></th>
+            <td><input type='tel'  name='tel'></td>
+        </tr>
+        <tr>
+            <th><label for="termino">Término de búsqueda:</label></th>
+            <td><input type='search'  name='buscar'></td>
+        </tr>
+        <tr>
+            <th><label for="color">Color favorito:</label></th>
+            <td><input type='color' name='colorr'></td>  
+        </tr>
+        <tr>
+        <th>  <input type="submit" name='enviar'></th>
+        </tr>
+    </form>
+    </table>
+</div>
+    <div id="form2">
+        <h1>Formulita 2</h1>
+        <h2>Pokemon - Cristal</h2>
+        <h3>¿Región?</h3>
+        <table id='table2'>
+                <form action="la formulita" method="POST" target="">
+                <tr>
+                    <th><label for="nombre" >Nombre:</label></th>
+                   <td> <input type="text" value="" name="nombre" id="nombre" placeholder="Nombre de usuario"
+                         size="20" maxlength="10" pattern="{A-Z}{S}" required autofocus></td>
+                    
+                </tr>
+                <tr>
+                    <th><label for="Contraseña">Contraseña</label></th>
+                    <td><input type='password' name='password' required></td>
+                </tr>
+                <tr>
+                        <th><label for="pregunta">¡Hola, soy el profesor Oak, pero antes que nada dime si eres...!</label></th>
+                        <td><input type="radio" name="pregunta" id="pregunta" value="S" name="S" checked="checked" />Mujer</td>
+                        <td><input type="radio" name="pregunta" id="pregunta" value="N"  name="N" />Hombre</td>
+                </tr>
+                <tr>
+                        <th><label>Perfecto!, ¿Y qué pokemon te gustaría entrenar?.</label></th>
+                        
+                        <td><input type="checkbox" name="char" value="c" />Charizard</td>
+                        <td><input type="checkbox" name="blas" value="b" />Blastoise</td>
+                        <td><input type="checkbox" name="venu" value="v" />Venusaur</td>
+                </tr>
+                <tr>
+                        <select name="regiones" id="regiones">
+                                <optgroup label="Region1">
+                                    <option value="KN">Kanto</option>
+                                </optgroup>
+                                <optgroup label="Region2">
+                                    <option value="Al">Alola</option>
+                                    <option value="Ka">Kalos</option>
+                            </optgroup>      
+                            </select>
+                </tr>
+                <tr>
+                    <th><label for="colorcito">Elige el color de tu gorra!</label></th>
+                    <td> <input type="color" name="favcolor"></td>
+                </tr>
+                <tr>
+                    <th><label for="foto">¡Sube una foto!</label></th>
+                    <td><input type="file" name="archivo" /></td>
+                </tr>
+                <tr>
+                    <th>Describete un poco</th>
+                    <td><textarea></textarea></td>
+                </tr>
+                <tr>
+                    <th><label for="Espartano">¡Pulsa solo si eres el más valiente de tu casa!</label></th>
+                   <td> <input type="button" value="Pulsar" name="boton" /></td>
+                </tr>
+                
+                <tr>
+                    <th><label for="number">Elige un número del 0 al 10</label></th>
+                    <td> <input type="number" name="numeros" min="1" max="10" required="required" /></td>
+                </tr>
+                <tr>
+                    <th><label for="amigo">Buscar a un amigo en línea:</label></th>
+                    <td><input type='search'  name='buscar'></td>
+                </tr>
+                
+                <tr>
+                <th>  <input type="submit" name='enviar'></th>
+                </tr>
             </form>
-
-
-
-
-
-
+            </table>
     </div>
 </body>
 </html>
+

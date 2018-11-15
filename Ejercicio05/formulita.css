@@ -1,0 +1,25 @@
+body{
+    background: rgb(221, 137, 88);
+}
+label{
+    color:black;
+}
+#table1{
+    background: rgb(145, 79, 199);
+    margin:0;
+    border: dotted rgb(236, 6, 6) 3px;
+}
+#table2{
+    
+  
+}
+#form2{
+    float: right;
+    background-image: url(pokemon.jpg);
+    margin:0;
+    border: dotted rgb(236, 6, 6) 3px;
+   label:
+}
+#form1{
+    float: left;
+}

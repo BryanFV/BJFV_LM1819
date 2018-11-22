@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #cor {
+            text-decoration: underline;
+        }
+
+        #tachado {
+            text-decoration: line-through;
+        }
+
+        #grande {
+            font-size: 18px;
+        }
+
+        #chico {
+            font-size: 13px;
+        }
+
+        #lista {
+            background: yellow;
+
+            height: 201px;
+            width: 456px;
+        }
+
+        #titlista {
+            color: #fca900;
+            text-align: center;
+        }
+
+        #morado {
+            color: darkviolet;
+        }
+
+        #verde {
+            color: green;
+        }
+
+        .rojo {
+            color: red;
+        }
+        #izquierda{ 
+            float: left;
+            width: 300px;
+            height: 250px;
+            margin: 10px;
+        }
+        #derecha{
+            float: left;
+            width: 300px;
+            height: 250px;
+            margin: 10px;
+        }
+        #textfont{
+            margin:0 auto;
+            height: 400px;
+            width: 800px;
+        }
+
+
+    </style>
+
+
+    <p><em>Text enfatizado</em></p>
+    <p><strong>Texto en negrita</strong></p>
+    <p>Texto definición</p>
+    <p><code>código fuente ordenador</code> </p>
+    <p><samp>Texto ejemplo de código fuente de ordenador</samp></p>
+    <p><kbd>Texto de teclado</kbd></p>
+    <p><var>Variable</var></p>
+    <p>En esta línea se muestra a un <span id="tachado">texto tachado</span> y se simula <span id="cor">una correción.</span></p>
+    <p><cite>Esto es una cita Cita</cite></p>
+    <p><span id="grande">Este texto es más grande</span> <span id="chico">y este es más pequeño</span></p>
+    <p>En esta línea tenemos <sup>texto en superíndice</sup> y <sub>en subiíndice</sub></p>
+    <p>
+        <pre>        <code>     El texto en una etiqueta 'pre' mantiene los espacios    y 
+        saltos de línea</code></pre>
+    </p>
+    <div id='lista'>
+        <ul><span id="titlista">Lista de enlaces</span>
+            <li>Buscadores
+                <ul>
+                    <li><a id="morado" href="http://www.bing.com">Bing</a></li>
+                    <li id="verde">Google</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Redes Sociales
+                <ul>
+                    <li><a class="rojo" href="http://www.facebook.com">Facebook</li>
+                    <li><a class="rojo" href="http://www.twitter.com"> Twitter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="textfont">
+        <div id="izquierda">
+            <h2>Encabezado Izquierda</h2>
+            <img src="img1.jpg" alt="mar" title="mar" />
+            <p><strong> 1 Descripción de la imágen</strong></p>
+        </div>
+        <div id="derecha">
+            <p>La música es, según la definición tradicional deltermino,
+                el arte de organizar sensible y lógicamente una combinación coherente
+                de sonidos y silencios utilizando los principios fundamentales de la melodía,
+                la intervención de complejos procesos psico-anímicos.
+            </p>
+       </div>
+
+    </div>
+    <div>
+        <table id='table1'>
+            <form action="la formulita" method="GET" target="">
+                <tr>
+                    <th><label for="asuto">Asunto:</label></th>
+                    <td><input type='text' name='asunto' autofocus required size="30" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <th><label for="apellido">*Primer Apellido:</label></th>
+                    <td><input type='text' name='apellido' required></td>
+                </tr>
+                <tr>
+                    <th><label for="apellido2">Segundo Apellido:</label></th>
+                    <td><input type="text" name="apellido2"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre">Nombre:</label></th>
+                    <td><input type="text" name="nombre"></td>
+                </tr>
+                <tr>
+                    <th><label for="ID">D.N.I. / Pasaporte / N.I.E.: </label></th>
+                    <td><input type='text' name='DNI' required size="10"></td>
+                </tr>
+                <tr>
+                    <th><label for="email">*Correo Electrónico:</label></th>
+                    <td><input type='text' name='email'></td>
+                </tr>
+                <tr>
+                    <th><label for="telefono">Teléfono:</label></th>
+                    <td><input type='tel' name='tel' size="10"></td>
+                </tr>
+                <tr>
+                    <th><label for="que">¿Sobre qué?</label></th>
+                    
+                    <td>
+                            <input type="text" min="esto" max="otro" size="25"/>
+                    </td> 
+                
+                </tr>
+                <tr>
+                    <th>¿Qué va a escribir?</th>
+                    <td><input type="text" size="25" /></td>
+                </tr>
+                <tr>
+                    <th>*Texto escrito:</th>
+                    <td><textarea size="60"></textarea></td>
+                </tr>
+                <tr><th>Los datos personales facilitados son  susceptibles de cesón cuando está sea precisa para tramitar su contestación.</th>
+                    
+
+                </tr>
+                <tr>
+                    <th><input type="submit" value="Enviar"></th>
+                </tr>
+                
+            </form>
+        </table>
+        
+    </div>
+    
+</body>
+
+</html>

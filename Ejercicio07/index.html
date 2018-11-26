@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página WEB</title>
+    <script src="main.js"></script>
+    <style type="text/css">
+    @media only screen and (max-width:1500px) and (min-width:547px){
+        body{
+            background: blue;
+        }
+    }
+    @media only screen and (max-width:547px){
+        body{
+            background: red;
+        }
+    }
+    @media only screen and(max-width:300px){
+        body{
+            background: purple;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>VIDEO</h1>
+    <video width="400" height="300"
+    controls
+    autoplay
+    loop
+    muted
+    preload="auto"
+    poster="">
+    <source src="small.mp4" type="video/mp4; codecs='avc1.42E01E'"/>
+    <source src="small.mp4"/>
+    <source src="small.ogv"/>
+    <p>Tu navegador no soporta HTML5</p>
+</video>
+<h1>AUDIO</h1>
+<audio
+autoplay
+controls
+loop
+preload="auto">
+<source src="audio.mp3" type="audio/mpeg"/>
+</audio>
+<h1>IFRAMES</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12682.25188348881!2d-5.9673969!3d37.37651655!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1543236231318" 
+width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<h1>OBJECT</h1>
+<object data="rebotes.swf" type="application/x-shockwave-flash">
+<param name="movie" value="rebotes.swf"/>
+<param name="quality" value="high"/>
+<param name="wmode" value="transparent"/>
+</object>
+<iframe src="datos.html" style="width 400px; height: 300px"></iframe>
+<object data="datos.html" type="text/html" style="width: 400px; height: 300px"></object>
+</body>
+</html>

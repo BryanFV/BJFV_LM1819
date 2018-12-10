@@ -1,0 +1,39 @@
+#cabecera{
+   
+    color: darkgreen;
+    height: 300px;
+}
+#contenedor{
+    background: #abeaab;
+}
+img{
+    float: left;
+    margin: 10px;
+    padding:10px;
+}
+#menu{
+    background:#a4cce3;
+    color:darkblue;
+    margin: 10px;
+    height: 35px;
+}
+#titulo{
+    color:darkred;
+    float: left;
+   
+}
+li{
+    display: inline-block; 
+}
+
+#izquierda{
+    
+}
+#derecha{
+    float: left;
+    text-align: justify;
+    
+}
+#derecha p{
+    clear:both;
+}

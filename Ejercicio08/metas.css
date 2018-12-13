@@ -1,0 +1,40 @@
+body {
+    background: lightgrey;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+  }
+h1{
+    text-align: center;
+}
+
+  
+  nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0px;
+  }
+  img{
+      display: block;
+      margin: 0 auto;
+  }
+  nav ul li {
+    float: left;
+  }
+  
+  nav ul li a {
+    
+    left: 380px;
+    display: block;
+    padding: 18px;
+    background-color: greenyellow;
+    text-decoration: none;
+    float: center;
+  
+  }
+  
+  nav ul li a:hover {
+    background: white;
+  }
+
+
+

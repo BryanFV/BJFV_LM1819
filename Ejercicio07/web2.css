@@ -5,6 +5,8 @@
 body {
     background: grey;
     text-align: center;
+    margin: 0;
+    padding: 15px;
 }
 
 #contenedor {
@@ -63,7 +65,11 @@ section {
     
 
 }
-
+#gigante{
+    background:#fff8c0;
+    padding: 20px;
+   margin: 0;
+}
 #menu2{
     background:#f8b48a;
     text-align: left;
@@ -74,8 +80,9 @@ section {
     padding: 5px;
     border-right: 1px solid #c68258;
 }
-#menu ul li a{
+#menu2 ul li a{
     text-decoration: none;
+    overflow: hidden;
 }
 #titulo{
     color:#6e8a7c;
@@ -85,7 +92,12 @@ section {
 }
 #contenedor2{
 background: #d28257;
-
+}
+article{
+    text-align: left;
+}
+article a{
+    text-decoration: none;
 }
 #segu {
     margin: 0 auto;
@@ -104,24 +116,25 @@ background: #d28257;
     margin: 10px 0px;
     background: #cccccc;
 }
-#columna blockquote {
+#bloque blockquote {
     font: bold 14px verdana, sans-serif;
 }
-.redes img{
+.redes2 img{
     width: 50px;
     height: 50px;
 }
 #uno,
 #cuatro,
 #siete {
-    background-color: #636363;
+    background-color: #bab0c5;
     padding: 2px;
     border: 1px solid black;
+    text-align: left;
 }
 
 #tres,
 #seis {
-    background-color: #999999;
+    background-color: #bab0c5;
     padding: 10px;
     border: 1px solid black;
 }
@@ -148,12 +161,14 @@ article footer {
 }
 
 
-
-.social ul {
+#ocho{
+    float: center;
+}
+.redes1 ul {
     list-style: none;
 }
 
-.social ul li a {
+.redes1 ul li a {
     display: block;
     color: #fff;
     background: #000;
@@ -161,33 +176,8 @@ article footer {
     text-decoration: none;
 }
 
-.social ul li .icon-facebook {
-    background: #3b5998;
-}
 
-/* Los colores de cada red social, aprovechando su class */
-.social ul li .icon-twitter {
-    background: #00abf0;
-}
-
-.social ul li .icon-google-plus2 {
-    background: rgb(252, 57, 57)
-}
-
-.social ul li .icon-pinterest {
-    background: rgb(236, 3, 3)
-}
-
-.social ul li .icon-rss2 {
-    background: rgb(255, 102, 0)
-}
-
-.social ul li a:hover {
-    background: rgb(67, 230, 94);
-    /* Cambiar fondo cuando el usuario pase el mouse */
-}
-
-.social li {
+.redes1 li {
     display: inline-block;
     list-style: none;
     padding: 1px;

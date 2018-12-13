@@ -1,0 +1,37 @@
+body {
+    background: lightgrey;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+
+.rojo{
+    color: red;
+}
+p{
+    color:green;
+}
+h2{
+    text-align: center;}
+#primera{
+    background: #00a8f3;
+}
+h1, span, p{
+    font-weight: bold;
+}
+#verde{
+    color: green;
+}
+#segunda{
+    font-family: cursive;
+}
+#enlaces a{
+    color:red;
+    text-decoration: none;
+}
+#grande{
+    font-size: 50px;
+}

@@ -7,7 +7,7 @@
     <title>Formulario con PHP</title>
 </head>
 <body>
-    <form action="resultado.php" method="POST">
+    <form action="resultado.php" method="POST" enctype="multipart/form-data">
        <p><label>Nombre</label><input type="text" name="nombre"></p>
        <p><label>Password</label> <input type="password" name="clave"></p>
        <p><label>Descripción:</label> <textarea name="Descripción"  cols="20" rows="5">Esta es la descripción</textarea></p>
@@ -17,6 +17,13 @@
            <input type="radio" name="datos" value="77">Dato2
            <input type="radio" name="datos" value="88">Dato3
        </p>
+       <p>
+           <select name="seleccion[]" multiple="multiple">
+               <option value="1">Uno</option>
+               <option value="2">Dos</option>
+           </select>
+       </p>
+       <p><input type="file" name="nombre del archivo"></p>
        <p><input type="submit" value="Enviar"></p>
     </form>
 

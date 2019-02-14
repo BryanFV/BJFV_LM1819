@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario con PHP</title>
+</head>
+<body>
+    <form action="resultado.php" method="POST">
+       <p><label>Nombre</label><input type="text" name="nombre"></p>
+       <p><label>Password</label> <input type="password" name="clave"></p>
+       <p><label>Descripción:</label> <textarea name="Descripción"  cols="20" rows="5">Esta es la descripción</textarea></p>
+       <p><label>Opción:</label><input type="checkbox" name="opcion" value="123"></p>
+       <p>
+           <input type="radio" name="datos" value="66" checked>Dato1
+           <input type="radio" name="datos" value="77">Dato2
+           <input type="radio" name="datos" value="88">Dato3
+       </p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    </form>
+</body>
+</html>

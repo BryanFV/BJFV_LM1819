@@ -16,7 +16,7 @@
     $cat2 = 16;
     $hipotenusa = calculaHipotenusa($cat1, $cat2);
     print "<p> El triángulo de lado $cat1, $cat2 y Hipotenusa $hipotenusa</p>";
-    
+    //devolver un resultado como ejecución de la función
     ?>
 </body>
 </html>

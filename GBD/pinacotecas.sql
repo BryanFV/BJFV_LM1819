@@ -10,13 +10,18 @@ select id_escuela from escuelas;
 --3.Usando concatenación de textos, se pide listar los datos de la tabla pintores con las siguientes columnas: "IDENTIFICADOR", "NOMBRE", "ID-NOMBRE", donde ID-NOMBRE será el resultado de la concatenación del campo ID_PINTOR y de N_PINTOR.
 SELECT PINTORES.id_pintor, PINTORES.N_PINTOR AS "ID-PINTOR" FROM PINTORES;
 SELECT concat(id_pintor, N_PINTOR) AS "ID-PINTOR" FROM PINTORES;
+select id_pintor, n_pintor, id_pintor ||''|| n_pintor "ID-PINTOR" FROM PINTORES;
 --4.Usando concatenación de textos, listar el contenido de la tabla pinacotecas de la siguiente forma: 
 --"Pinacoteca (ID_PINACOTECA): (NOMBRE)".
  SELECT concat('Pinacoteca ', id_pinacoteca, ': ', pinacoteca) AS "NOMBRE" FROM pinacotecas;
+ select 'Pinacoteca' || id_pinacoteca || ': ' || nombre as Informacion from Pinacotecas;
 --5.Seleccionar nombre y país de la tabla pinacotecas donde ID_PINACOTECA es "MUBAS".
 select nombre, pais from pinacotecas where id_pinacoteca='MUBAS';
 --6.Seleccionar técnica, ancho y alto de los siguientes cuadros: La Gioconda, El nacimiento de Venus y Sagrada Familia.
 SELECT TECNICA, ANCHO, ALTO FROM CUADROS WHERE N_CUADRO='LA GIOCONDA' or n_cuadro='EL NACIMIENTO DE VENUS' or n_cuadro='SAGRADA FAMILIA';
+SELECT TECNICA, ANCHO, ALTO FROM CUADROS WHERE N_CUADRO like upper('La Gioconda') 
+or n_cuadro like upper('El Nacimiento de Venus') or n_cuadro like upper('Sagrada Familia');
+
 --7.Seleccionar nombre y ciudad de nacimiento de los mecenas italianos.
 select n_mecenas, ciudad_nac from Mecenas where pais ='ITALIA';
 --8.Seleccionar el nombre de los mecenas que nacieron en Madrid o en Valladolid.

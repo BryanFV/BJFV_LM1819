@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Inicio</title>
+        <title>Inicio 1</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet"
@@ -23,16 +23,18 @@
                     <label for="email">Email Alumno</label>
                     <input type="email" class="form-control" name="email" id="email" required>
                 </div>
-                <div class="form-group"> 
+                <div class="form-group">
                     <label for="curso">Curso Alumno</label>
                     <select name="curso" class="form-control" >
-                     <?php
-                     $conexion = mysqli_connect("localhost", "root", "", "cursophp") or die ("Problemas de Conexión");
-                     $registros = mysqli_query($conexion, "SELECT idCurso, nombreCurso from curso") or die ("Problemas en el select".mysqli_error($conexion));
-                     while ($reg = mysqli_fetch_array($registros)){
-                         print "<option value=$reg[idCurso]>$reg[nombreCurso]</option>";
-                     }
-                     ?>
+                        <?php
+                        $conexion = mysqli_connect("localhost", "root", "", "cursophp") 
+                            or die("Problemas de conexión");
+                        $registros = mysqli_query($conexion, "SELECT idCurso, nombreCurso FROM cursos")
+                            or die("Problemas en el select".mysqli_error($conexion));
+                        while ($reg = mysqli_fetch_array($registros)) {
+                            echo "<option value='$reg[idCurso]'>$reg[nombreCurso]</option>";
+                        }
+                        ?>
                     </select>
                 </div>
                 <p>

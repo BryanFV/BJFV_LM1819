@@ -13,16 +13,19 @@
     </head>
     <body>
         <div class="container">
-           <?php
-           $nombre=trim(htmlspecialchars($_REQUEST["nombre"], ENT_QUOTES, "UTF-8"));
-           $email=trim(htmlspecialchars($_REQUEST["email"], ENT_QUOTES, "UTF-8"));
-           $curso=trim(htmlspecialchars($_REQUEST["curso"], ENT_QUOTES, "UTF-8"));
-           $conexion = mysqli_connect("localhost", "root", "", "cursophp") or die ("Problemas de conexión");
-           mysqli_query($conexion, "INSERT INTO alumnos(nombre, mail, condigocurso) VALUES('$nombre', '$email', '$curso')")
-            or die("Problemas en el insert". mysqli_error($conexion));
+            <?php
+            $nombre = trim(htmlspecialchars($_REQUEST["nombre"], ENT_QUOTES, "UTF-8"));
+            $email = trim(htmlspecialchars($_REQUEST["email"], ENT_QUOTES, "UTF-8"));
+            $curso = trim(htmlspecialchars($_REQUEST["curso"], ENT_QUOTES, "UTF-8"));
+            $conexion = mysqli_connect("localhost", "root", "", "cursophp")
+                or die("Problemas de conexión");
+            mysqli_query($conexion, 
+                "INSERT INTO alumnos(nombre, mail, codigocurso) VALUES ('$nombre','$email',$curso)")
+                or die("Problemas en el insert".mysqli_error($conexion));
+            
             mysqli_close($conexion);
-            print "<h2>Alumno dado de Alta</h2>"
-           ?>
+            print "<h2>Alumno dado de Alta</h2>";
+            ?>
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

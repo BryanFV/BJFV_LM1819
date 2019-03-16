@@ -575,3 +575,18 @@ Alias /curso "C:\Users\Alumno\Documents\REPOSITORIOS\BJFV_LM1819\PHP"
 	Require all granted
 	</Directory>
 </IfModule>
+
+
+--casa
+
+
+<IfModule alias_module>
+Alias /curso "D:\PERSONAL\Cajón de sastre\Ciclo Superior\LM\REPOSITORIOS\BJFV_LM1819\PHP"
+	<Directory "D:\PERSONAL\Cajón de sastre\Ciclo Superior\LM\REPOSITORIOS\BJFV_LM1819\PHP">
+        Options indexes FollowSymLinks Includes ExecCGI
+	AllowOverride all
+	Order allow,deny
+	Allow from all
+	Require all granted
+	</Directory>
+</IfModule>

@@ -29,7 +29,7 @@ if (empty($pulgadas)){
     $pulgadasok = true;
 }
 
-if ($piesok && $pulgadas){
+if ($piesok && $pulgadasok){
     $cm = ($pies * 12 + $pulgadas) * UNAPULGADA;
     print "<p>$pies pies y $pulgadas pulgadas son $cm centímetros.</p>";
 }

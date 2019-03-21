@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Inicio</title>
+        <title>Actualizador</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet"
@@ -11,7 +11,17 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous">
     </head>
-    <body>
+    <body><?php
+            $identificador=trim(htmlspecialchars($_REQUEST["identificador"], ENT_QUOTES, "UTF-8"));
+            $nombre=trim(htmlspecialchars($_REQUEST["nombre"], ENT_QUOTES, "UTF-8"));
+            $curso=trim(htmlspecialchars($_REQUEST["curso"], ENT_QUOTES, "UTF-8"));
+
+            $conexion = mysqli_connect("localhost", "root", "", "cursophp") or die ("Problemas de conexión");
+            $registro = mysqli_query($conexion, "UPDATE alumnos SET nombre='$nombre', codigocurso=$curso WHERE idAlumno=
+            $identificador") or die
+            ("Problemas en la consulta: ".mysqli_error($conexion)); 
+            
+        ?>
         <div class="container">
             <h1 style="text-align:center; color:blue;">Email</h1>
             <form action="datos.php" method="post">

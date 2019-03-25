@@ -1,0 +1,18 @@
+bdphp
+
+ORDENADORES:
+*idOrdenador
+- marca
+- procesador
+- memoria
+- perifericos (1/0)
+- perifericos
+- fecha_compra
+*idUbicacion
+
+UBICACION
+*idUbicacion
+- nombre
+- descripcion
+- localizacion(maps) iframe
+

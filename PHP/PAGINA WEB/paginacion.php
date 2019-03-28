@@ -47,11 +47,11 @@
                 echo "<a href='paginacion.php?posicion=$anterior'>ANTERIORES</a>";
             }
 
-            if ($contador !=2){
-                echo"Siguiente";
-            }else{
+            if (($inicio + $contador) < mysqli_num_rows(mysqli_query($conexion, "SELECT * FROM alumnos"))){
                 $siguiente = $inicio + 2;
                 echo "<a href='paginacion.php?posicion=$siguiente'>SIGUIENTES</a>";
+            }else{
+                echo "Siguientes";
             }
             mysqli_close($conexion);
 ?>

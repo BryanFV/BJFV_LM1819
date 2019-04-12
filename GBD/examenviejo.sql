@@ -62,6 +62,12 @@ RIGHT JOIN COUNTRIES C
 ON L.COUNTRY_ID = C.COUNTRY_ID
 WHERE E.SALARY = (SELECT MIN(SALARY) FROM EMPLOYEES);
 ...................................................................................................................................................
+select DISTINCT e.first_name, e.last_name c.country_name from employees e
+inner join deparments d on e.deparment_id = d.deparment_id
+inner join locations l on d.location_id = l.location_id
+inner join countries c on l.country_id = c.country_id
+where e.salary = (select min(salary) from employees;);
+
 --6)Muestra los nombres de departamento que su sueldo mínimo supere el sueldo medio del departamento 80.
 SELECT DISTINCT D.DEPARTMENT_NAME FROM DEPARTMENTS D
 INNER JOIN EMPLOYEES E
@@ -69,3 +75,10 @@ ON D.DEPARTMENT_ID = E.DEPARTMENT_ID
 INNER JOIN JOBS J
 ON J.JOB_ID = E.JOB_ID
 WHERE J.MIN_SALARY > (SELECT AVG(SALARY) FROM EMPLOYEES WHERE DEPARTMENT_ID = 80)
+................
+SELECT DISTINCT d.department_name from deparments d
+inner join employees e 
+ on d.deparment_id = e.deparment_id
+inner join jobs j on e.job_id = j.job_id 
+where j.min_salary > 
+(select avg(salary) from employees where deparment_id = 80);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Ejercicio011_3  xmlns:a="https://www.url.com/" xmlns:b="https://www.clientes.com/">
+<Ejercicio011_3  xmlns:a="https://www.libreria.com/" xmlns:b="https://www.clientes.com/">
 <a:LIBRERIA>
   <a:NOMBRE>CASA DEL LIBRO</a:NOMBRE>
   <a:ZONA>Localizada en Sevilla</a:ZONA>

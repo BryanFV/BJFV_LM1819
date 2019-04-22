@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bliblioteca>
+  <Categorías>
+    <Cocina>
+      <Cocina_Sencilla>
+        <Título lan="es">Los chistes de arguiñano</Título>
+        <Autor>Arguiñano López </Autor>
+        <Editorial>Sin Dinero</Editorial>
+        <ISBN>87854215454</ISBN>
+        <Prestado>NO</Prestado>
+      </Cocina_Sencilla>
+    </Cocina>
+    <Juvenil>
+      <Musica>
+        <Título lan="es">Pappo Blues</Título>
+        <Autor>Pappo Blues</Autor>
+        <Editorial>Blues </Editorial>
+        <ISBN>145236984158</ISBN>
+        <Prestado>SI</Prestado>
+      </Musica>
+      <FIESTA>
+        <Título lan="es">Cómo y dónde hacer un botellón</Título>
+        <Autor>Yo y mis amigos</Autor>
+        <Editorial>Del Barrio</Editorial>
+        <ISBN>974757577747</ISBN>
+        <Prestado>SI</Prestado>
+      </FIESTA>
+    </Juvenil>
+    <Adultos>
+      <Amor>
+        <Título lan="es">50 sombras de Gandalf</Título>
+        <Autor>Gandalf El Gris</Autor>
+        <Editorial>ESLDA</Editorial>
+        <ISBN>25435656465422</ISBN>
+        <Prestado>NO</Prestado>
+      </Amor>
+    </Adultos>
+  </Categorías>
+</Bliblioteca>

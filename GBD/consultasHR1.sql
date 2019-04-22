@@ -1,6 +1,4 @@
 
-
-
 1. Mostrar el apellido, fecha de alta y número de departamento de cada empleado.+
 Select last_name, hire_date, department_id from EMPLOYEES;
 

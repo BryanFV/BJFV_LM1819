@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ejercicio011_3  xmlns:a="https://www.url.com/" xmlns:b="https://www.clientes.com/">
+<a:LIBRERIA>
+  <a:NOMBRE>CASA DEL LIBRO</a:NOMBRE>
+  <a:ZONA>Localizada en Sevilla</a:ZONA>
+  <a:DEFINICION>Tienda de venta de libros</a:DEFINICION>
+  <a:TAMAÑO>Tienda Mediana</a:TAMAÑO>
+</h:LIBRERIA>
+
+<b:CLIENTES>
+  <b:CANTIDAD>100</b:CANTIDAD>
+  <b:EDADES>Adultos y Jóvenes</b:EDADES>
+  <b:GUSTOS>Novelas y Revistas</b:GUSTOS>
+  <b:AÑO>2019</b:AÑO>
+</b:CLIENTES>
+</Ejercicio011_3>

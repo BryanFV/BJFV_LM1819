@@ -37,4 +37,4 @@ select first_name from employees where months_between(sysdate,hire_date)>72;
 --18.- Muestra los empleados que fueron dados de alta entre el 01/03/1988 y el 30/06/1989.
 select ename
 from emp
-where hiredate>to_date(’01/03/1988′,’dd/mm/yyyy’) and hiredate<to_date('30 06="" 1989)
+where hiredate >to_date('01-03-1988','dd-mm-yyyy') and hiredate < to_date('30-06-1989', 'dd-mm-yyyy');

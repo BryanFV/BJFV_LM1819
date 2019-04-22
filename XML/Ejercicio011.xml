@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IESCIUDADJARDIN>
+  <Datos>
+    <nombre>I.E.S. MALA MUERTE</nombre>
+    <localidad>Mi Tierra</localidad>
+    <pais>El mío</pais>
+    <teléfono>666111999</teléfono>
+  </Datos>
+  <Estudiantes>
+    <Primero_ESO>
+      <estudiante_1>
+        <nombre>Alfredo</nombre>
+        <apellido>Sefue Portabaco</apellido>
+        <edad>11</edad>
+        <color>Rojo</color>
+      </estudiante_1>
+    </Primero_ESO>
+    <Primero_Bachiller>
+      <estudiante_1>
+        <nombre>Iskandar</nombre>
+        <apellido>Elcon Quistador</apellido>
+        <edad>34</edad>
+        <color>Negro</color>
+      </estudiante_1>
+    </Primero_Bachiller>
+     <Primero_FP>
+      <estudiante_1>
+        <nombre>Petter </nombre>
+        <apellido>Parker</apellido>
+        <edad>17 y dos meses</edad>
+        <color>Azul</color>
+      </estudiante_1>
+    </Primero_FP>
+  </Estudiantes>
+  <Profesores>
+    <ESO>
+      <TodaslasAsignaturas>
+        <nombre>Tony</nombre>
+        <apellido>Stark</apellido>
+        <edad>47</edad>
+        <dni>981453424455415446H</dni>
+      </TodaslasAsignaturas>
+    </ESO>
+    <Bachiller>
+       <TodaslasAsignaturas>
+        <nombre>Michael </nombre>
+        <apellido>Scofield</apellido>
+        <edad>33</edad>
+        <dni>10110101011H</dni>
+      </TodaslasAsignaturas>
+    </Bachiller>
+    <FP>
+       <TodaslasAsignaturas>
+        <nombre>Lobo</nombre>
+        <apellido>Dewall Street</apellido>
+        <edad>31</edad>
+        <dni>9999999999999€</dni>
+      </TodaslasAsignaturas>
+    </FP>
+  </Profesores>
+  <Puerta>
+    <Conserje>
+      <nombre>Susana</nombre>
+      <apellido>Griso</apellido>
+      <edad>41</edad>
+      <dni>123456789K</dni>
+    </Conserje>
+  </Puerta>
+</IESCIUDADJARDIN>

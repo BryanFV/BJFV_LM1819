@@ -2,6 +2,7 @@ set SERVEROUTPUT ON
 DECLARE 
 v_varl VARCHAR2(10);
 result number;
+
 v_emp employees
 
 BEGIN

@@ -25,4 +25,5 @@ echo '<description>Canal de noticias del IES</description>';
      echo '</item>';
  }
  echo '</channel>';
+ echo '</rss>';
 ?>

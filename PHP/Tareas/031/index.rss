@@ -1,0 +1,21 @@
+<rss version="2.0">
+      <channel>
+      <title>Noticias sobre Hormigas</title>
+      <link>https://www.muyinteresante.es/</link>
+      <language>es</language>;
+      <description>Noticias variadas.</description>
+        
+       <item>
+            <title>El imperio de las hormigas</title>
+            <link>https://www.muyinteresante.es/naturaleza/articulo/el-imperio-de-las-hormigas</link>
+            <Date>29/05/19</Date>
+            <category>Naturaleza</category>
+            <autor>Elena Sanz</autor>
+            <description>  Aunque vistos de cerca estos insectos poseen un cierto aire alienígena,
+                            lo cierto es que millones de años antes de que los primeros Homo sapiens colonizaran 
+                            Europa, ya sabían organizarse en sociedades complejas y estructuradas.
+            </description>
+        </item>
+         
+    </channel>
+</rss>

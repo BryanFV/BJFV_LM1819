@@ -55,14 +55,13 @@ end EJER3;
 
 --Codificar un procedimiento que permita borrar un empleado cuyo número se introducirá por teclado.
 
-CREATE OR REPLACE PROCEDURE BORRAR_EMPLEADO (E_CODIGO IN EMPLOYEES.EMPLOYEE_ID%TYPE)
+CREATE OR REPLACE PROCEDURE borrar (borrar IN EMPLOYEES.EMPLOYEE_ID%TYPE)
 IS
 BEGIN
-  DELETE EMPLOYEES
-  WHERE EMPLOYEE_ID= E_CODIGO;
-END BORRAR_EMPLEADO;
+  DELETE employees WHERE employee_id= borrar;
+END borrar;
 
---Escribir un procedimiento que modifique la localidad de un departamento. El procedimiento recibirá como parámetros el número del departamento y la localidad nueva.
+--1.e-3--Escribir un procedimiento que modifique la localidad de un departamento. El procedimiento recibirá como parámetros el número del departamento y la localidad nueva.
 
 CREATE OR REPLACE PROCEDURE MODIFICAR_LOCALIDAD (ID_DEPARTAMENTO IN DEPARTMENTS.DEPARTMENT_ID%TYPE, ID_LOCALIDAD IN DEPARTMENTS.LOCATION_ID%TYPE)
 IS

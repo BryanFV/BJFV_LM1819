@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Datos XML-->
+<!--Pdtd-2a Escribe el DTD que valide el siguiente documento-->
+<!DOCTYPE libroPostres SYSTEM "file:///C:/Users/Alumno/Documents/REPOSITORIOS/BJFV_LM1819/XML/DTD/libropostre.dtd">
+<libroPostres>
+<receta id="rec_1"> Mousse de chocolate </receta>
+<receta id="rec_2"> Fondue saboyana </receta>
+<receta id="rec_3"> Fondue de chocolate </receta>
+<ingrediente ref="rec_1"> chocolate </ingrediente>
+<ingrediente> Azúcar </ingrediente>
+<ingrediente ref="rec_2 rec_3"> Comté </ingrediente>
+</libroPostres>

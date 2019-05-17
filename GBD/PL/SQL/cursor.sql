@@ -26,4 +26,8 @@ for v_reg_cursor IN emp_cursor LOOP
 END LOOP;
 
 END;
-
+--PAra ejecutar funcionaes creamos un bloque anonimo:
+set SERVEROUTPUT on
+begin
+  --Aquí va el nombre del parametro o función
+end;

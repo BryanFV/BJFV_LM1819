@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Revista[
+<!ELEMENT Revista (nombre, fecha, articulo+)>
+<!ELEMENT articulo (titulo, Autor, NPalabras,Texto)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT Autor (#PCDATA)>
+<!ELEMENT NPalabras (#PCDATA)>
+<!ELEMENT texto (#PCDATA)>
+]>
+
+<Revista></Revista>

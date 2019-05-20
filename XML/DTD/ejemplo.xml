@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Examen[
+    <!ELEMENT examen (grupo, fecha, tema, alumno+, nota*)>
+    <!ELEMENT grupo (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT tema (#PCDATA)>
+    <!ELEMENT alumno (#PCDATA)>
+    <!ELEMENT nota (#PCDATA)>
+
+<!ATTLIST alumno idAlumno ID #REQUIRED>
+<!ATTLIST nota idNota IDREFS #REQUIRED>
+]>
+
+<examen>
+    <grupo>CSI1</grupo>
+    <fecha>20/05/2019</fecha>
+    <tema>Cuestionario DTD</tema>
+    <alumno idAlumno="1">Adolfo Tijeras</alumno>
+    <alumno idAlumno="2">Manolito </alumno>
+    <nota idNota="1">2</nota>
+</examen>

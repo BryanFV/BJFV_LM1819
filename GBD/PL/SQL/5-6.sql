@@ -58,7 +58,7 @@ BEGIN
 OPEN buscar;
 FETCH buscar INTO v_escribe;
     WHILE buscar%FOUND LOOP
-    DBMS_OUTPUT.PUT_LINE('Nombre: '||v_escribe.first_name||' Número: '||v_escribe.employee_id||);
+    DBMS_OUTPUT.PUT_LINE('Nombre: '||v_escribe.first_name||' Número: '||v_escribe.employee_id);
     FETCH buscar INTO v_escribe;
 END LOOP;
 dbms_output.put_line('Hay '||buscar%ROWCOUNT||' empleados.');
@@ -68,24 +68,67 @@ END;
 --5.- Crear un procedimiento que muestre las localizaciones (dirección y ciudad) y el número 
 --de departamentos que tiene (incluso si no tiene departamentos). --> 2 puntos
 SET SERVEROUTPUT ON
-CREATE OR REPLACE PROCEDURE LOCALIZACIONES
+CREATE OR REPLACE PROCEDURE cinco
 IS
 CURSOR loc IS
-SELECT street_address, city, count(department_name) FROM departments, locations where location_id.departments=location_id.locations;
-v_loc street_address.%TYPE;
-v_dname dept.dname%TYPE;
-v_num_emp NUMBER;
+SELECT street_address, city, department_name FROM departments;
+v_street departments.street_addreess%TYPE;
+v_dname departments.city%TYPE;
+v_numdept NUMBER;
 BEGIN
-OPEN c_depar;
-            FETCH c_depar INTO v_deptno, v_dname;
-            WHILE c_depar%FOUND LOOP
-            v_num_emp:=devolverNumEmpleado (v_deptno); /*LLAMANDO A UNA FUNCIÓN PONIENDO LA VARIABLE*/
+OPEN loc;
+            FETCH loc INTO v_street, v_dname;
+            WHILE loc%FOUND LOOP
+            v_numdept:=cinco (v_deptno); /*LLAMANDO A UNA FUNCIÓN PONIENDO LA VARIABLE*/
             dbms_output.put_line (' el departamento ' ||v_dname|| ' tiene ' ||v_num_emp);
             FETCH c_depar INTO v_deptno, v_dname;
             END LOOP;
             CLOSE c_depar;
-
-
+           
+END;
+/
 --6.- Escribir un programa que visualice el nombre, apellido y el salario de los cuatro empleados que tienen el salario más bajo. --> 2 puntos
-
+SET SERVEROUTPUT ON
+DECLARE
+CURSOR emp IS
+SELECT first_name, last_name, salary FROM employees ORDER BY salary asc;
+v_reg_sal emp%ROWTYPE;
+v_cantidad NUMBER;
+BEGIN
+v_cantidad:=1;
+OPEN emp;
+FETCH emp INTO v_reg_sal;
+WHILE emp%FOUND AND v_cantidad<=4 LOOP 
+DBMS_OUTPUT.PUT_LINE('El empleado: '||v_reg_sal.first_name||'tiene un salario de '|| v_reg_sal.salary); 
+FETCH emp INTO v_reg_sal;
+v_cantidad:=v_cantidad+1;
+END LOOP;
+CLOSE emp;
+END;
 --7.-Codificar un programa que visualice los dos empleados que ganan más de cada oficio. 2 puntos
+SET SERVEROUTPUT ON
+DECLARE
+CURSOR emp IS
+SELECT first_name, job_id, salary FROM employees ORDER BY job_id, salary;
+v_reg_emp emp%ROWTYPE;
+v_job employees.job_id%TYPE;
+v_cantidad NUMBER;
+BEGIN
+OPEN emp;
+v_job:='*';
+FETCH emp INTO v_reg_emp;
+WHILE emp%FOUND LOOP 
+IF v_job <> v_reg_emp.job_id THEN
+v_job := v_reg_emp.job_id;
+v_cantidad := 1;
+END IF;
+IF v_cantidad <= 2 THEN
+DBMS_OUTPUT.PUT_LINE(v_reg_emp.job_id||' * '
+||v_reg_emp.first_name||' * '
+||v_reg_emp.salary); 
+END IF;
+FETCH emp INTO v_reg_emp;
+v_cantidad:=v_cantidad+1;
+END LOOP;
+CLOSE emp;
+END;

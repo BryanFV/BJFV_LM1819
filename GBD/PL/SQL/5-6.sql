@@ -49,12 +49,13 @@ END;
 --los empleados cuyo nombre contenga la cadena especificada. 
 --Al finalizar visualizar el número de empleados mostrados. --> 1.5 punto
 SET SERVEROUTPUT ON
+CREATE OR REPLACE PROCEDURE CONCATENA (v_cadena in VARCHAR2)
 DECLARE
 CURSOR buscar IS
  SELECT first_name, employee_id FROM employees where first_name like v_escribe;
  v_escribe buscar%ROWTYPE;
 BEGIN
-    v_escribe:='%'"||&v_escribe||"'%';
+    v_escribe VARCHAR2(50):='%'||&m_cadena||'%';
 OPEN buscar;
 FETCH buscar INTO v_escribe;
     WHILE buscar%FOUND LOOP
@@ -69,17 +70,17 @@ END;
 --de departamentos que tiene (incluso si no tiene departamentos). --> 2 puntos
 SET SERVEROUTPUT ON
 CREATE OR REPLACE PROCEDURE cinco
-IS
+AS
 CURSOR loc IS
-SELECT street_address, city, department_name FROM departments;
-v_street departments.street_addreess%TYPE;
-v_dname departments.city%TYPE;
-v_numdept NUMBER;
+SELECT street_address, city, count(department_id) as Departamentos FROM locations l
+left join departments d on l.location_id=d.location_id group by street_address. city;
+v_street loc%TYPE;
+
 BEGIN
 OPEN loc;
             FETCH loc INTO v_street, v_dname;
             WHILE loc%FOUND LOOP
-            v_numdept:=cinco (v_deptno); /*LLAMANDO A UNA FUNCIÓN PONIENDO LA VARIABLE*/
+            v_numdept:=cinco (v_deptno); 
             dbms_output.put_line (' el departamento ' ||v_dname|| ' tiene ' ||v_num_emp);
             FETCH c_depar INTO v_deptno, v_dname;
             END LOOP;
@@ -93,9 +94,8 @@ DECLARE
 CURSOR emp IS
 SELECT first_name, last_name, salary FROM employees ORDER BY salary asc;
 v_reg_sal emp%ROWTYPE;
-v_cantidad NUMBER;
+v_contador number :=1;
 BEGIN
-v_cantidad:=1;
 OPEN emp;
 FETCH emp INTO v_reg_sal;
 WHILE emp%FOUND AND v_cantidad<=4 LOOP 
@@ -109,7 +109,7 @@ END;
 SET SERVEROUTPUT ON
 DECLARE
 CURSOR emp IS
-SELECT first_name, job_id, salary FROM employees ORDER BY job_id, salary;
+SELECT first_name, job_id, salary FROM employees ORDER BY job_title asc, salar desc;
 v_reg_emp emp%ROWTYPE;
 v_job employees.job_id%TYPE;
 v_cantidad NUMBER;

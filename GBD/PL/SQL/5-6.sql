@@ -14,6 +14,15 @@ FETCH nombre_cursor INTO v_reg_nombre;
 END LOOP;
 CLOSE nombre_cursor;
 END;
+SET SERVEROUTPUT ON
+CREATE OR REPLACE PROCEDURE LIMITE_CREDITO (E_PARAMETRO IN OFICINAS.OFICINA%TYPE)
+AS
+CURSOR LIMITE_CURSOR
+V_LIMITE OFICINAS.OFICINA%TYPE;
+begin
+  
+end;
+
 --2.- Desarrollar un procedimiento que encuentre el primer empleado con un sueldo menor de 6.000 €. --> 0.5 puntos
 SET SERVEROUTPUT ON
 DECLARE

@@ -44,6 +44,25 @@ END;
 SELECT C.LIMITE_CREDITO, O.OFICINA AS CODIGO_OFICINA FROM CLIENTES C INNER JOIN EMPLEADOS E ON C.REP_CLIE=E.NUM_EMPL
 INNER JOIN OFICINAS O ON E.OFICINA=O.OFICINA;
 
---5. Usando un cursor, crear un procedimiento llamado datos_empleados que reciba como parámetro un número de empleado y muestre el nombre, la edad y el número de pedidos, de aquellos empleados cuyo número sea menor o igual que el introducido. 2.5 puntos. 
+--5. Usando un cursor, crear un procedimiento llamado datos_empleados que reciba como parámetro un número de empleado y muestre el nombre,
+-- la edad y el número de pedidos, de aquellos empleados cuyo número sea menor o igual que el introducido. 2.5 puntos. 
+CREATE OR REPLACE PROCEDURE DATOS_EMPLEADOS (N_EMPLEADO IN NUMBER)
+IS
+CURSOR DATOS_CURSOR 
+IS
+SELECT E.NOMBRE, E.EDAD, COUNT(P.REP)
+FROM EMPLEADOS E INNER JOIN PEDIDOS P ON E.NUM_EMPL=P.REP WHERE E.NUM_EMPL <= N_EMPLEADO;
+V_NOMBRE EMPLEADOS.NOMBRE%TYPE;
+V_EDAD EMPLEADOS.EDAD%TYPE;
+V_DATOS NUMBER;
+BEGIN
+OPEN DATOS_CURSOR;
+FETCH DATOS_CURSOR INTO V_NOMBRE, V_EDAD, V_DATOS;
+WHILE DATOS_CURSOR%FOUND LOOP
+DBMS_OUTPUT.PUT_LINE(' NOMBRE: ' || V_NOMBRE || ' EDAD: ' || V_EDAD || ' NUMERO DE PEDIDOS: ' || V_DATOS);
+FETCH DATOS_CURSOR INTO V_NOMBRE, V_EDAD, V_DATOS;
+END LOOP;
+CLOSE DATOS_CURSOR;
+END;
 
 --6. Crear un procedimiento llamado inserta_producto que reciba los datos como parámetros y realice la inserción en la correspondiente tabla. Un ejemplo de llamada al procedimiento será inserta_producto ('RAY', '2B45D', 'JUNTA', 79, 210). Antes de proceder a la inserción se debe comprobar si se cumple la restricción de clave primaria, esto es, si ya existe el id_producto que se desea introducir se mostrará un mensaje de error indicando que se está violando la restricción. En cambio, si la inserción se realiza con éxito, se mostrará un mensaje indicándolo. (2.5 puntos.)

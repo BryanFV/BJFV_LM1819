@@ -65,4 +65,23 @@ END LOOP;
 CLOSE DATOS_CURSOR;
 END;
 
---6. Crear un procedimiento llamado inserta_producto que reciba los datos como parámetros y realice la inserción en la correspondiente tabla. Un ejemplo de llamada al procedimiento será inserta_producto ('RAY', '2B45D', 'JUNTA', 79, 210). Antes de proceder a la inserción se debe comprobar si se cumple la restricción de clave primaria, esto es, si ya existe el id_producto que se desea introducir se mostrará un mensaje de error indicando que se está violando la restricción. En cambio, si la inserción se realiza con éxito, se mostrará un mensaje indicándolo. (2.5 puntos.)
+--6. Crear un procedimiento llamado inserta_producto que reciba los datos como parámetros y realice la inserción en la correspondiente tabla. Un ejemplo de llamada al procedimiento será inserta_producto ('RAY', '2B45D', 'JUNTA', 79, 210). Antes de proceder a la inserción se debe comprobar si se cumple la restricción de clave primaria, esto es, si ya existe el id_producto que se desea introducir se mostrará un mensaje de error indicando que se está violando la restricción. En cambio, 
+--si la inserción se realiza con éxito, se mostrará un mensaje indicándolo. (2.5 puntos.)
+CREATE OR REPLACE PROCEDURE INSERTA_PRODUCTO (V_FAB IN PRODUCTOS.ID_FAB%TYPE , V_PROD IN PRODUCTOS.ID_PRODUCTO%TYPE, 
+V_DESC PRODUCTOS.DESCRIPCION%TYPE, V_PRE PRODUCTOS.PRECIO%TYPE, V_EXIS PRODUCTOS.EXISTENCIAS%TYPE)
+IS
+CURSOR C_INSERTAR IS
+SELECT * FROM PRODUCTOS;
+V_GUARDADO PRODUCTOS%ROWTYPE;
+
+BEGIN
+OPEN C_INSERTAR;
+FETCH C_INSERTAR INTO V_GUARDADO;
+IF V_GUARDADO.ID_PRODUCTO = V_PROD THEN
+DBMS_OUTPUT.PUT_LINE('YA EXISTE LA CLAVE PRIMARIA');
+ELSE
+    INSERT INTO PRODUCTOS VALUES (V_FAB, V_PROD, V_DESC, V_PRE, V_EXIS);
+FETCH C_INSERTAR INTO V_GUARDADO;
+END IF;
+CLOSE C_INSERTAR;
+END;

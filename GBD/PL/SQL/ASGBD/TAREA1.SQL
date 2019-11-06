@@ -96,8 +96,32 @@ CREATE OR REPLACE PROCEDURE SUBIDA_DE_SUELDO_PRIMO
  --COMPROBACIÓN:
  SELECT SALARY FROM EMPLOYEES2 WHERE JOB_ID='IT_PROG';
 
- --g.Crear un procedimiento que inserte un empleado en la tabla EMPLOYEES. Su número será superior al último en 10 unidades, el nombre y la ciudad la pasaremos por parámetros, complete con los campos obligatorios necesarios.
+--g.Crear un procedimiento que inserte un empleado en la tabla EMPLOYEES. Su número será superior al último en 10 unidades, el nombre y la ciudad la pasaremos por parámetros, complete con los campos obligatorios necesarios.
+
+
+
+
+
+--BUSCAR EL DEPARTAMENTO CON LA LOCALIDAD Y 
+
+
+
+
+
 --2. Codificar un procedimiento que reciba una cadena y la visualice al revés.
+SET SERVEROUTPUT ON
+create or replace procedure estoy_del_reves
+    as
+  V_CADENA1 VARCHAR2(20):='HOLA mundito chan!'; 
+  V_RESULT VARCHAR2(20);
+  begin 
+  FOR I IN REVERSE 1..LENGTH(V_CADENA1) LOOP 
+  V_RESULT:=V_RESULT||substr(V_CADENA1,I,1); 
+  end loop; 
+  dbms_output.put_line(V_RESULT); 
+  end estoy_del_reves;
+  /
+  EXEC estoy_del_reves();
 
 --3. Escribir un procedimiento que reciba una fecha y escriba el año, en número, correspondiente a esa fecha.
 

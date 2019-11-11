@@ -1,0 +1,36 @@
+Función Sudoku
+Declaraciones
+    Entero Sudoku[3][3];
+Inicio:
+    PARA(ENTERO I=O; I<10; I=I+1)
+        Sudoku = GENERAR_SUDOKU();
+        ESCRIBIR("COMPLETE EL SIGUIENTE SUDOKU");
+        ESCRIBIR(SUDOKU);           DIBUJAR(SUDOKU);
+        PARA (J=0; J<3; J=J+1)
+            PARA (K=0; K<3; K=K+1)
+                SI SUDOKU[J][K]==0:
+                    ESCRIBIR("INTRODUZCA EL NÚMERO");
+                    ESCRIBIR("J,K");
+                    SUDOKU[J][K]=LEER();
+                FIN SI;
+            FIN PARA;
+        FIN PARA;
+    
+
+        BOOLEANO CORRECTO = CIERTO;
+        ENTERO J = 0;
+        MIENTRAS (CORRECTO Y J<3)
+            SI((SUDOKU[J][O]+
+                SUDOKU[J][1]+
+                SUDOKU[J][2]+ =/15)Ó
+                (SUDOKU[0][J]+)
+                SUDOKU[I][J]+
+                SUDOKU_5
+                SUDOKU[J][K]==SUDOKU_5[J][K]; 
+                    CORRECTO=FALSO;
+            FIN SI;
+            SI (CORRECTO)
+                 ESCRIBIR("CORRECTO");
+                 PUNTUACIÓN_3 = PUNTUACIÓN_3+1
+            FIN SI;
+    FIN PARA;

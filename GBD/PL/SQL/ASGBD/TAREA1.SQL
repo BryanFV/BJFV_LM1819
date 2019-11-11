@@ -124,6 +124,16 @@ create or replace procedure estoy_del_reves
   EXEC estoy_del_reves();
 
 --3. Escribir un procedimiento que reciba una fecha y escriba el año, en número, correspondiente a esa fecha.
+CREATE OR REPLACE PROCEDURE ANYO(FECHA IN VARCHAR2)
+    AS  
+        FECHA_CONV DATE;
+        ANYO NUMBER;
+BEGIN
+
+  SELECT TO_DATE (FECHA, 'YYYY-MM-DD') IN TO FECHA_CONV FROM DUAL;
+  SELECT TO_CHAR(FECHA_CONV, 'YYYY') INTO ANYO FROM DUAL;
+  dbms_output.PUT_LINE(ANYO);
+END ANYO;
 
 --4. Codificar un procedimiento que reciba una lista de hasta 4 números y visualice su suma.
 

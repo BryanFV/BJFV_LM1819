@@ -7,9 +7,9 @@ BEGIN
 OPEN emp_cursor;
 FETCH emp_cursor INTO v_reg_cursor;
     WHILE emp_cursor%FOUND LOOP
-    DBMS_OUTPUT.PUT_LINE(v_reg_cursor.first_name||'*'|| v_reg_cursor.email);
-    FETCH emp_cursor INTO v_reg_cursor;
-END LOOP;
+      DBMS_OUTPUT.PUT_LINE(v_reg_cursor.first_name||'*'|| v_reg_cursor.email);
+      FETCH emp_cursor INTO v_reg_cursor;
+    END LOOP;
 CLOSE emp_cursor;
 END;
 ---CON FOR:---
@@ -31,3 +31,5 @@ set SERVEROUTPUT on
 begin
   --Aquí va el nombre del parametro o función
 end;
+
+s_cursor 

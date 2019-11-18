@@ -19,25 +19,6 @@ END;
 /
 EXEC P_NOMBRE_D();
 
---3. Realizar un procedimiento que visualice el número y nombre de un empleado, así como el nombre de su departamento, ordenados por nombre de departamento. --> 1 punto
-SET SERVEROUTPUT ON
-CREATE OR REPLACE PROCEDURE p_empleado
-is
-CURSOR c_empleado IS
- SELECT employee_id, first_name, department_name FROM employees e , departments d
-  where e.department_id=d.department_id order by department_name asc;
- v_empleado c_empleado%ROWTYPE;
-BEGIN
-OPEN c_empleado;
-FETCH c_empleado INTO v_empleado;
-    WHILE c_empleado%FOUND LOOP
-    DBMS_OUTPUT.PUT_LINE('Nombre: '||v_empleado.employee_id||' Apellido: '|| v_empleado.first_name||' Departamento: '||v_empleado.department_name);
-    FETCH c_empleado INTO v_empleado;
-END LOOP;
-CLOSE c_empleado;
-END;
-/
-EXEC p_empleado()
 
 --2. Desarrollar un procedimiento que encuentre el primer empleado con un sueldo menor de 6.000 €. --> 0.5 puntos
 SET SERVEROUTPUT ON

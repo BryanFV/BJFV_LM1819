@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <h1>EL SUPER FORMULARIO</h1>
+</head>
+<body>
+    <script type="text/javascript">
+        function Valida(formulario)
+        {
+            // Campos obligatorios:
+            if(formulario.nombre.value.length == 0
+            || formulario.apellidos.value.length == 0
+            //|| formulario.telefono.value.length == 0
+            || formulario.email.value.length == 0)
+            {
+                alert('Falta información');
+                return false;
+            }
+            // Teléfono:
+            var expresionRegularTlf=/(^[0-9]{9,9})*$/
+            if(!expresionRegularTlf.test(formulario.telefono.value))
+            {
+                alert('El teléfono no es correcto.');
+                return false;
+            }
+            /*if(isNaN(parseInt(formulario.telefono.value))
+            || formulario.telefono.value.length != 9)
+            {
+                alert('El teléfono no es correcto.');
+                return false;
+            }*/
+            return true;
+        }
+    </script>
+    <form name="formulario2" action="mailto:correo@correo.com"
+    onsubmit="return Valida(this);">
+        Nombre: <input type="text" name="nombre">
+        <br>
+        Apellidos: <input type="text" name="apellidos">
+        <br>
+        Teléfono: <input type="text" name="telefono">
+        <br>
+        Correo electrónico: <input type="text" name="email">
+        <br>
+        CODIGO POSTAL <input type="text" name="postal" maxlength="5">
+        <br>
+        Ciudad: <input type="text" name="ciudad">
+        <br>
+        Ocupación: <input type="text" name="ocupacion">
+        <br>
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
+</body>
+</html>
